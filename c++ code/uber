@@ -1,0 +1,63 @@
+#include <iostream>
+
+using namespace std;
+void uberx(int a,int x){
+    float base_fare=2;
+    float per_minutes=.22*a;
+    float permile=1.15*x;
+    float minfare=6.55;
+    float total=base_fare+per_minutes+permile+minfare;
+    cout<<"rider's name : mary pape"<<endl;
+    cout<<"total : "<<total<<endl;
+}
+void suv(int a,int x){
+    float base_fare=15;
+    float per_minutes=.9*a;
+    float permile=3.75*x;
+    float minfare=25;
+    float total=base_fare+per_minutes+permile+minfare;
+    cout<<"rider's name : martin"<<endl;
+    cout<<"total : "<<total<<endl;
+}
+void luxury(int a,int x){
+    float base_fare=5;
+    float per_minutes=.5*a;
+    float permile=2.75*x;
+    float minfare=10.55;
+     float total=base_fare+per_minutes+permile+minfare;
+    cout<<"rider's name : ahmed"<<endl;
+    cout<<"total price : "<<total<<endl;
+}
+
+int main()
+{
+   int l_m,d_mi,m;
+   string name ;
+   char choice , surge ;
+   cout <<"entr name "<<endl;
+   cin>>name;
+   cout<<"entre time in minutes ";
+   cin>>m;
+   
+   cout<<"entre the distance of ride in miles "<<endl;
+   cin>>d_mi;
+   cout<<"entre x for uber  or s for suv or l for luxury"<<endl;
+   cin>>choice;
+   cout<<"entre 'y' if surge or 'n' if not"<<endl;
+   cin>>surge;
+   if(surge='y'){
+       d_mi+=1.9;
+   }
+   
+   switch(choice){
+       case 'x':uberx(m,d_mi);
+       break;
+       case 's': suv(m,d_mi);
+       break;
+       case'l':luxury(m,d_mi);
+       break;
+   }
+   
+   cout<<"We are happy to deal with you, please rate our service ";
+   
+}
