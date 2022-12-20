@@ -1,0 +1,29 @@
+#include <iostream>
+#include<vector>
+
+using namespace std;
+
+
+int main()
+{
+    string name;
+    int n;
+  vector<string>songs;
+while(true){
+cout<<" hello! please enter 1 to add asong  and 0 to quite "<<endl;
+cin >>n;
+if (n==1)
+{    cout <<"entre the song "<<endl;
+     cin>>name;
+      songs.push_back(name);}
+      else {
+     songs.pop_back();
+     sort (songs.begin(),songs.end());
+     cout<<"your list is "<<endl;
+     for (int i=0; i<=songs.size();i++){
+            cout<<i+1<<"."<<songs[i]<<endl;}
+    
+}
+    
+        }}
+
