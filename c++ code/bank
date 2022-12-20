@@ -1,0 +1,97 @@
+#include <iostream>
+
+using namespace std;
+
+//making class bank
+class Bank{
+
+public:
+    string name;
+    int balance ;
+    int Account_number ;
+
+Bank(string n,int b,long long an){
+    name=n;
+    balance=b;
+    Account_number=an;
+}
+//func to check balance
+void checkBalance(int b){
+    cout<<"Your balance is :"<<balance<<endl;    
+}
+
+/*//func to check accounting_number
+string accounting_number (int Account_number){
+    if (Account_number){
+    cout<<"welcome  "<<name<<endl;    
+}else{
+    cout <<"the account is not exitit";
+    return 0;
+}}*/
+//func to create account 
+void create_account(string name ,int money){
+    int ac;
+    ac=123433+money;
+    cout<<ac<<87444<<endl;
+}
+//func to checck withdraw
+void withdraw(int money){
+balance=balance-money;
+    cout<<"your balance is "<<balance;
+}
+
+
+//func to compute deposite
+void deposite(int money){
+  balance=balance+money; 
+  cout<<"your balance is  "<<balance ;
+}
+
+};
+string create_account ();
+
+
+int main(){
+
+int n,v;
+
+
+string name ;
+int ac_n,b,money,b_d;
+
+
+cout <<"entre name"<<endl;
+cin >>name;
+cout<<"entre your balance "<<endl;
+cin>>b;
+cout <<"entre accounting_number"<<endl;
+cin>>ac_n;
+cout <<"entre money "<<endl;
+cin>>money;
+cout<<"Select option "<<endl;
+ cout<<"1 Deposit"<<endl;
+ cout<<"2 Withdraw"<<endl;
+ cout<<"3 show Balance "<<endl;
+ cout<<"4 create account  "<<endl;
+ cout<<"Enter your choice: "<<endl; 
+cin>>n;
+
+
+Bank a1=Bank(name,b,ac_n);
+// a1.accounting_number(v);
+        switch(n){
+        case 1 :
+        a1.deposite(money);
+        break;
+        
+        case 2:
+        a1.withdraw(money);
+        break;
+        case 3:
+        a1.checkBalance(b);
+        break;
+        case 4:a1.create_account(name,money);
+        break;
+       
+        
+    }}
